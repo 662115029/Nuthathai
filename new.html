@@ -5,22 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu Example</title>
     <script>
-        function openNewPage(option) {
-            if (option === "spidy") {
-                window.location.href = "new.html"; // Navigate to new.html
+        function navigate() {
+            const selectedOption = document.getElementById("menu").value;
+            if (selectedOption === "me") {
+                window.location.href = "index.html"; // Redirects to index.html
+            } else if (selectedOption === "spidy") {
+                window.location.href = "new.html"; // Redirects to new.html
             }
         }
     </script>
 </head>
 <body>
     <label for="menu">Choose an option:</label>
-    <select id="menu" onchange="openNewPage(this.value)">
-        <option value="">--Select--</option>
+    <select id="menu" name="menu" onchange="navigate()">
+        <option value="">Select</option>
         <option value="me">Me</option>
         <option value="spidy">Spidy</option>
     </select>
 </body>
 </html>
+
 
 Spidy name: Lady
 Spidy lastname: Gaga
